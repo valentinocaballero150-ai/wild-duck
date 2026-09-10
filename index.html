@@ -7,50 +7,109 @@
 <style>
 *{margin:0;padding:0;box-sizing:border-box; scroll-behavior: smooth;}
 body{font-family:'Arial Black',Arial,sans-serif;background:#000;color:#fff;text-transform:uppercase; line-height:1.4;}
-:root{--cat-yellow:#FFCC00; --cat-black:#000;}
-/* BANNER GRANDE ESTILO CAT */
+:root{--cat-yellow:#FFCC00; --cat-black:#000; --whatsapp:#25D366;}
+
+/* BANNER */
 header{position:relative; height:75vh; background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url('banner-maquina.jpg') center/cover no-repeat; display:flex; align-items:center; justify-content:center; text-align:center; border-bottom:8px solid var(--cat-yellow);}
 .header-content{position:relative; z-index:2;}
 .logo{max-width:400px; width:90%; filter:drop-shadow(0 0 20px var(--cat-yellow));}
 h1{font-size:3.5rem; color:var(--cat-yellow); letter-spacing:3px; margin:20px 0;}
 .subtitle{font-size:1.3rem; margin-bottom:30px; letter-spacing:1px;}
-.btn-cat{background:var(--cat-yellow); color:#000; padding:18px 40px; font-size:1.2rem; font-weight:900; border:none; text-decoration:none; display:inline-block; margin:10px; transition:0.3s;}
+.btn-cat{background:var(--cat-yellow); color:#000; padding:18px 40px; font-size:1.2rem; font-weight:900; border:none; text-decoration:none; display:inline-block; margin:10px; transition:0.3s; cursor:pointer;}
 .btn-cat:hover{background:#fff; transform:scale(1.05);}
 .btn-white{background:#fff; color:#000;}
+
 /* MENÚ */
 nav{background:var(--cat-black); padding:20px; border-bottom:3px solid var(--cat-yellow); position:sticky; top:0; z-index:100; text-align:center;}
 nav a{color:#fff; text-decoration:none; font-weight:900; margin:0 15px; font-size:1rem;}
 nav a:hover{color:var(--cat-yellow);}
+
 /* SECCIONES */
 section{padding:80px 20px; max-width:1200px; margin:0 auto;}
 h2{font-size:2.5rem; color:var(--cat-yellow); text-align:center; margin-bottom:50px; letter-spacing:2px;}
 .grid-4{display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:30px;}
 .grid-3{display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:30px;}
-/* TARJETAS INDUSTRIALES */
+
 .card-cat{background:#111; padding:35px 25px; border-left:5px solid var(--cat-yellow); text-align:center; transition:0.3s;}
 .card-cat:hover{background:#1a1a1a; transform:translateY(-5px);}
 .card-cat h3{color:var(--cat-yellow); font-size:1.3rem; margin-bottom:15px;}
+
 /* ESTADÍSTICAS */
 .stats{background:#111; padding:60px 20px; text-align:center; border-top:3px solid var(--cat-yellow); border-bottom:3px solid var(--cat-yellow);}
 .stat-num{font-size:4rem; color:var(--cat-yellow); font-weight:900;}
+
 /* ANTES Y DESPUÉS */
 .gallery-cat{display:grid; grid-template-columns:1fr 1fr; gap:20px;}
 .before-after-cat{position:relative;}
 .before-after-cat img{width:100%; height:300px; object-fit:cover; border:3px solid var(--cat-yellow);}
 .tag{background:var(--cat-yellow); color:#000; padding:8px 20px; position:absolute; top:10px; left:10px; font-weight:900; font-size:1rem;}
+
 /* TESTIMONIOS */
 .testimonio{background:#111; padding:30px; border-left:5px solid var(--cat-yellow);}
 .stars{color:var(--cat-yellow); font-size:1.5rem; margin-bottom:10px;}
+
 /* CONTACTO */
 .contact-cat{background:#111;}
-input,textarea{width:100%; padding:15px; margin:10px 0; background:#222; border:2px solid #333; color:#fff; font-size:1rem; font-family:Arial;}
+input,textarea{width:100%; padding:15px; margin:10px 0; background:#222; border:2px solid #333; color:#fff; font-size:1rem; font-family:Arial; text-transform:uppercase;}
 input:focus,textarea:focus{border-color:var(--cat-yellow); outline:none;}
+
 /* FOOTER */
 footer{background:#000; text-align:center; padding:40px; border-top:3px solid var(--cat-yellow);}
-/* BOTONES FLOTANTES */
-.whatsapp-float{position:fixed; bottom:20px; right:20px; background:var(--cat-yellow); color:#000; width:70px; height:70px; display:flex; align-items:center; justify-content:center; font-weight:900; font-size:35px; text-decoration:none; z-index:999;}
-.call-float{position:fixed; bottom:20px; left:20px; background:var(--cat-yellow); color:#000; padding:15px 25px; font-weight:900; text-decoration:none; display:none; z-index:999;}
-@media(max-width:768px){.call-float{display:block;}.gallery-cat{grid-template-columns:1fr;} h1{font-size:2.2rem;}}
+
+/* WHATSAPP VERDE FLOTANTE */
+.whatsapp-float{
+  position:fixed; 
+  bottom:25px; 
+  right:25px; 
+  background:var(--whatsapp); 
+  color:#fff; 
+  width:65px; 
+  height:65px; 
+  border-radius:50%; 
+  display:flex; 
+  align-items:center; 
+  justify-content:center; 
+  font-size:40px; 
+  text-decoration:none; 
+  z-index:999; 
+  box-shadow:0 4px 20px rgba(37,211,102,0.5);
+  animation:pulse 2s infinite;
+  transition:transform 0.3s;
+}
+.whatsapp-float:hover{transform:scale(1.1);}
+@keyframes pulse{
+ 0%{box-shadow:0 0 0 0 rgba(37,211,102,0.7);}
+ 70%{box-shadow:0 0 0 20px rgba(37,211,102,0);}
+ 100%{box-shadow:0 0 0 0 rgba(37,211,102,0);}
+}
+
+/* BOTÓN LLAMAR MÓVIL */
+.call-float{position:fixed; bottom:25px; left:25px; background:var(--cat-yellow); color:#000; padding:15px 25px; font-weight:900; text-decoration:none; display:none; border-radius:50px; z-index:999;}
+
+/* CHATBOX */
+#chat-button{
+  position:fixed; bottom:100px; right:25px; background:var(--cat-yellow); color:#000; 
+  width:60px; height:60px; border-radius:50%; display:flex; align-items:center; 
+  justify-content:center; font-size:30px; cursor:pointer; z-index:998; font-weight:900;
+  box-shadow:0 4px 15px rgba(255,204,0,0.5);
+}
+#chat-box{
+  position:fixed; bottom:100px; right:25px; width:320px; height:420px; 
+  background:#1a1a1a; border:3px solid var(--cat-yellow); border-radius:10px; 
+  display:none; flex-direction:column; z-index:998;
+}
+#chat-header{background:var(--cat-yellow); color:#000; padding:15px; font-weight:900; display:flex; justify-content:space-between;}
+#chat-messages{flex:1; padding:15px; overflow-y:auto; font-size:0.9rem; text-transform:none;}
+#chat-input-area{padding:10px; display:flex; border-top:1px solid #333;}
+#chat-input{flex:1; padding:10px; background:#222; border:1px solid #333; color:#fff; text-transform:none;}
+#send-chat{background:var(--whatsapp); color:#fff; border:none; padding:10px 15px; cursor:pointer; font-weight:900;}
+
+@media(max-width:768px){
+  .call-float{display:block;}
+  .gallery-cat{grid-template-columns:1fr;} 
+  h1{font-size:2.2rem;}
+  nav a{margin:0 8px; font-size:0.9rem;}
+  #chat-box{width:90%; right:5%;}
 </style>
 </head>
 <body>
@@ -65,7 +124,7 @@ footer{background:#000; text-align:center; padding:40px; border-top:3px solid va
   <a href="#contacto">CONTACTO</a>
 </nav>
 
-<!-- HEADER / BANNER -->
+<!-- HEADER -->
 <header id="inicio">
   <div class="header-content">
     <img src="logo.jpg" class="logo" alt="WILD DUCK">
@@ -139,17 +198,17 @@ footer{background:#000; text-align:center; padding:40px; border-top:3px solid va
 <h2>LO QUE DICEN NUESTROS CLIENTES</h2>
 <div class="grid-3">
   <div class="testimonio">
-    <div class="stars">⭐⭐</div>
+    <div class="stars">⭐</div>
     <p>"ME SALVARON LA EXCAVADORA EN 1 DÍA. LLEGARON A OBRA RAPIDÍSIMO"</p>
     <b>- CARLOS M. CONSTRUCTORA ANDES</b>
   </div>
   <div class="testimonio">
-    <div class="stars">⭐⭐⭐⭐⭐</div>
+    <div class="stars">⭐⭐⭐</div>
     <p>"PROFESIONALES Y HONESTOS. EL MEJOR SERVICIO DE TARAPOTO"</p>
     <b>- LUIS R. AGROINDUSTRIAL</b>
   </div>
   <div class="testimonio">
-    <div class="stars">⭐⭐⭐⭐⭐</div>
+    <div class="stars">⭐</div>
     <p>"SOLUCIONARON UNA FALLA HIDRÁULICA QUE OTROS NO PUDIERON"</p>
     <b>- MARÍA F. MINERÍA</b>
   </div>
@@ -166,11 +225,6 @@ footer{background:#000; text-align:center; padding:40px; border-top:3px solid va
   <textarea rows="4" placeholder="DESCRIBA LA FALLA O SERVICIO REQUERIDO"></textarea>
   <button class="btn-cat" style="width:100%; border:none;">ENVIAR SOLICITUD</button>
 </form>
-
-<div style="text-align:center; margin-top:40px;">
-  <p style="font-size:1.2rem;">O CONTÁCTANOS DIRECTO</p>
-  <a href="https://wa.me/51906294436" class="btn-cat" style="margin-top:15px;">WHATSAPP: 906 294 436</a>
-</div>
 </section>
 
 <!-- FOOTER -->
@@ -179,9 +233,65 @@ footer{background:#000; text-align:center; padding:40px; border-top:3px solid va
 <p style="margin-top:15px; color:#666;">© 2026 WILD DUCK DIESEL REPAIR | SERVICIO TÉCNICO ESPECIALIZADO</p>
 </footer>
 
-<!-- BOTONES FLOTANTES -->
-<a href="https://wa.me/51906294436" target="_blank" class="whatsapp-float">WA</a>
+<!-- BOTÓN WHATSAPP VERDE FLOTANTE -->
+<a href="https://wa.me/51906294436" target="_blank" class="whatsapp-float">📱</a>
+
+<!-- BOTÓN LLAMAR FLOTANTE MÓVIL -->
 <a href="tel:51906294436" class="call-float">📞 LLAMAR</a>
+
+<!-- CHATBOX FLOTANTE -->
+<div id="chat-button">💬</div>
+<div id="chat-box">
+  <div id="chat-header">
+    <span>WILD DUCK ASISTENTE</span>
+    <span id="close-chat" style="cursor:pointer;">X</span>
+  </div>
+  <div id="chat-messages">
+    <p><b>Bot:</b> Hola! Soy el asistente de WILD DUCK 👋<br><br>Elige una opción:<br>1. Solicitar Cotización<br>2. Reportar Emergencia<br>3. Horarios de atención<br>4. Hablar con asesor</p>
+  </div>
+  <div id="chat-input-area">
+    <input id="chat-input" type="text" placeholder="Escribe 1, 2, 3 o 4">
+    <button id="send-chat">></button>
+  </div>
+</div>
+
+<script>
+// CHATBOX FUNCIONAL
+const chatBtn = document.getElementById('chat-button');
+const chatBox = document.getElementById('chat-box');
+const closeChat = document.getElementById('close-chat');
+const chatInput = document.getElementById('chat-input');
+const sendChat = document.getElementById('send-chat');
+const chatMessages = document.getElementById('chat-messages');
+
+chatBtn.onclick = () => chatBox.style.display = 'flex';
+closeChat.onclick = () => chatBox.style.display = 'none';
+
+function sendMessage(){
+  let msg = chatInput.value.trim();
+  if(msg === '') return;
+  
+  chatMessages.innerHTML += `<p><b>Tú:</b> ${msg}</p>`;
+  
+  let reply = '';
+  if(msg === '1') reply = 'Perfecto! Para tu cotización necesito: Tipo de máquina y falla. Escríbeme al WhatsApp 906 294 436 y te respondo en 5 min.';
+  else if(msg === '2') reply = '¡EMERGENCIA! Llámanos ya al 906 294 436. Atendemos 24/7 en Tarapoto.';
+  else if(msg === '3') reply = 'Horario: Lunes a Sábado 8AM - 6PM. Emergencias 24/7 por WhatsApp.';
+  else if(msg === '4') reply = 'Un asesor te atenderá. Escríbenos al WhatsApp 906 294 436 ahora.';
+  else reply = 'No entendí. Por favor escribe 1, 2, 3 o 4.';
+  
+  setTimeout(() => {
+    chatMessages.innerHTML += `<p><b>Bot:</b> ${reply}</p>`;
+    chatMessages.scrollTop = chatMessages.scrollHeight;
+  }, 500);
+  
+  chatInput.value = '';
+  chatMessages.scrollTop = chatMessages.scrollHeight;
+}
+
+sendChat.onclick = sendMessage;
+chatInput.addEventListener('keypress', function(e){ if(e.key === 'Enter') sendMessage(); });
+</script>
 
 </body>
 </html>
