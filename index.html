@@ -3,129 +3,185 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>WILD DUCK Diesel Repair - Mantenimiento y Reparación de Maquinaria Pesada</title>
+<title>WILD DUCK | Servicio Técnico Maquinaria Pesada</title>
 <style>
-*{margin:0;padding:0;box-sizing:border-box; scroll-behavior: smooth;} /* scroll-behavior para que baje suave */
-body{font-family:'Segoe UI',Arial,sans-serif;background:#0a0a0a;color:#fff;line-height:1.6}
-header{background:linear-gradient(135deg,#0a0a0a 0%,#1a1a1a 100%);text-align:center;padding:40px 20px;border-bottom:4px solid #ffb400}
-.logo{max-width:350px;width:90%;margin:0 auto 20px;display:block;filter:drop-shadow(0 0 20px rgba(255,180,0,0.3))}
-h1{font-size:2.5rem;color:#ffb400;text-transform:uppercase;letter-spacing:2px;margin-bottom:10px}
-.subtitle{font-size:1.2rem;color:#ccc}
-section{padding:50px 20px;max-width:1100px;margin:0 auto}
-h2{font-size:2rem;color:#ffb400;margin-bottom:20px;text-align:center;border-bottom:2px solid #ffb400;display:inline-block;padding-bottom:10px}
-.services{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;margin-top:30px}
-.card{background:#1a1a1a;padding:25px;border-radius:10px;border-left:4px solid #ffb400;transition:transform 0.3s}
-.card:hover{transform:translateY(-5px);background:#222}
-.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:15px;margin-top:30px}
-.gallery img{width:100%;height:200px;object-fit:cover;border-radius:8px;border:2px solid #333}
-.contact{background:#111;text-align:center}
-.btn-whatsapp{display:inline-block;background:#25D366;color:#fff;padding:15px 35px;font-size:1.2rem;border-radius:50px;text-decoration:none;font-weight:bold;margin:20px 10px}
-.info-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:30px;margin-top:30px;text-align:left}
-.map-container{margin-top:20px;border-radius:10px;overflow:hidden;border:3px solid #ffb400}
-footer{background:#000;text-align:center;padding:20px;color:#666}
-
-/* NUEVO: Estilos para el menú */
-nav a:hover{color:#ffb400!important;}
-.btn{transition:transform 0.2s;}
-.btn:hover{transform:scale(1.05);}
-
-/* NUEVO: Estilos para FAQ */
-details[open] summary{color:#fff;}
+*{margin:0;padding:0;box-sizing:border-box; scroll-behavior: smooth;}
+body{font-family:'Arial Black',Arial,sans-serif;background:#000;color:#fff;text-transform:uppercase; line-height:1.4;}
+:root{--cat-yellow:#FFCC00; --cat-black:#000;}
+/* BANNER GRANDE ESTILO CAT */
+header{position:relative; height:75vh; background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url('banner-maquina.jpg') center/cover no-repeat; display:flex; align-items:center; justify-content:center; text-align:center; border-bottom:8px solid var(--cat-yellow);}
+.header-content{position:relative; z-index:2;}
+.logo{max-width:400px; width:90%; filter:drop-shadow(0 0 20px var(--cat-yellow));}
+h1{font-size:3.5rem; color:var(--cat-yellow); letter-spacing:3px; margin:20px 0;}
+.subtitle{font-size:1.3rem; margin-bottom:30px; letter-spacing:1px;}
+.btn-cat{background:var(--cat-yellow); color:#000; padding:18px 40px; font-size:1.2rem; font-weight:900; border:none; text-decoration:none; display:inline-block; margin:10px; transition:0.3s;}
+.btn-cat:hover{background:#fff; transform:scale(1.05);}
+.btn-white{background:#fff; color:#000;}
+/* MENÚ */
+nav{background:var(--cat-black); padding:20px; border-bottom:3px solid var(--cat-yellow); position:sticky; top:0; z-index:100; text-align:center;}
+nav a{color:#fff; text-decoration:none; font-weight:900; margin:0 15px; font-size:1rem;}
+nav a:hover{color:var(--cat-yellow);}
+/* SECCIONES */
+section{padding:80px 20px; max-width:1200px; margin:0 auto;}
+h2{font-size:2.5rem; color:var(--cat-yellow); text-align:center; margin-bottom:50px; letter-spacing:2px;}
+.grid-4{display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:30px;}
+.grid-3{display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:30px;}
+/* TARJETAS INDUSTRIALES */
+.card-cat{background:#111; padding:35px 25px; border-left:5px solid var(--cat-yellow); text-align:center; transition:0.3s;}
+.card-cat:hover{background:#1a1a1a; transform:translateY(-5px);}
+.card-cat h3{color:var(--cat-yellow); font-size:1.3rem; margin-bottom:15px;}
+/* ESTADÍSTICAS */
+.stats{background:#111; padding:60px 20px; text-align:center; border-top:3px solid var(--cat-yellow); border-bottom:3px solid var(--cat-yellow);}
+.stat-num{font-size:4rem; color:var(--cat-yellow); font-weight:900;}
+/* ANTES Y DESPUÉS */
+.gallery-cat{display:grid; grid-template-columns:1fr 1fr; gap:20px;}
+.before-after-cat{position:relative;}
+.before-after-cat img{width:100%; height:300px; object-fit:cover; border:3px solid var(--cat-yellow);}
+.tag{background:var(--cat-yellow); color:#000; padding:8px 20px; position:absolute; top:10px; left:10px; font-weight:900; font-size:1rem;}
+/* TESTIMONIOS */
+.testimonio{background:#111; padding:30px; border-left:5px solid var(--cat-yellow);}
+.stars{color:var(--cat-yellow); font-size:1.5rem; margin-bottom:10px;}
+/* CONTACTO */
+.contact-cat{background:#111;}
+input,textarea{width:100%; padding:15px; margin:10px 0; background:#222; border:2px solid #333; color:#fff; font-size:1rem; font-family:Arial;}
+input:focus,textarea:focus{border-color:var(--cat-yellow); outline:none;}
+/* FOOTER */
+footer{background:#000; text-align:center; padding:40px; border-top:3px solid var(--cat-yellow);}
+/* BOTONES FLOTANTES */
+.whatsapp-float{position:fixed; bottom:20px; right:20px; background:var(--cat-yellow); color:#000; width:70px; height:70px; display:flex; align-items:center; justify-content:center; font-weight:900; font-size:35px; text-decoration:none; z-index:999;}
+.call-float{position:fixed; bottom:20px; left:20px; background:var(--cat-yellow); color:#000; padding:15px 25px; font-weight:900; text-decoration:none; display:none; z-index:999;}
+@media(max-width:768px){.call-float{display:block;}.gallery-cat{grid-template-columns:1fr;} h1{font-size:2.2rem;}}
 </style>
 </head>
 <body>
 
-<!-- NUEVO: MENÚ DE NAVEGACIÓN -->
-<nav style="background:#000; padding:15px; position:sticky; top:0; z-index:100; border-bottom:2px solid #ffb400;">
-  <div style="max-width:1100px; margin:0 auto; display:flex; justify-content:center; gap:30px; flex-wrap:wrap;">
-    <a href="#inicio" style="color:#ffb400; text-decoration:none; font-weight:bold;">Inicio</a>
-    <a href="#servicios" style="color:#fff; text-decoration:none; font-weight:bold;">Servicios</a>
-    <a href="#galeria" style="color:#fff; text-decoration:none; font-weight:bold;">Galería</a>
-    <a href="#faq" style="color:#fff; text-decoration:none; font-weight:bold;">Preguntas</a>
-    <a href="#contacto" style="color:#fff; text-decoration:none; font-weight:bold;">Contacto</a>
-  </div>
+<!-- MENÚ -->
+<nav>
+  <a href="#inicio">INICIO</a>
+  <a href="#servicios">SERVICIOS</a>
+  <a href="#industrias">INDUSTRIAS</a>
+  <a href="#resultados">PROYECTOS</a>
+  <a href="#nosotros">NOSOTROS</a>
+  <a href="#contacto">CONTACTO</a>
 </nav>
 
-<!-- NUEVO: Le agregué id="inicio" -->
+<!-- HEADER / BANNER -->
 <header id="inicio">
-<img src="logo.jpg" alt="WILD DUCK Diesel Repair" class="logo">
-<h1>WILD DUCK</h1>
-<p class="subtitle">Diesel Repair - Mantenimiento y Reparación de Maquinaria Pesada</p>
-
-<!-- NUEVO: BOTONES DE ACCIÓN -->
-<div style="margin-top:20px;">
-  <a href="#servicios" class="btn" style="background:#ffb400; color:#000; padding:12px 25px; border-radius:8px; text-decoration:none; font-weight:bold; margin:5px; display:inline-block;">Ver Servicios</a>
-  <a href="https://wa.me/51906294436" target="_blank" class="btn" style="background:#25D366; color:#fff; padding:12px 25px; border-radius:8px; text-decoration:none; font-weight:bold; margin:5px; display:inline-block;">Pedir Cotización</a>
-</div>
+  <div class="header-content">
+    <img src="logo.jpg" class="logo" alt="WILD DUCK">
+    <h1>WILD DUCK DIESEL REPAIR</h1>
+    <p class="subtitle">MÁXIMA POTENCIA. CERO TIEMPO DE INACTIVIDAD.</p>
+    <a href="#contacto" class="btn-cat">SOLICITAR SERVICIO</a>
+    <a href="tel:51906294436" class="btn-cat btn-white">LLAMAR AHORA</a>
+  </div>
 </header>
 
-<!-- NUEVO: Le agregué id="servicios" -->
+<!-- ESTADÍSTICAS -->
+<section class="stats">
+  <div class="grid-4">
+    <div><div class="stat-num">250+</div><p>MÁQUINAS REPARADAS</p></div>
+    <div><div class="stat-num">24/7</div><p>EMERGENCIAS</p></div>
+    <div><div class="stat-num">10+</div><p>AÑOS EXPERIENCIA</p></div>
+    <div><div class="stat-num">98%</div><p>CLIENTES SATISFECHOS</p></div>
+  </div>
+</section>
+
+<!-- INDUSTRIAS -->
+<section id="industrias">
+<h2>SOLUCIONES POR INDUSTRIA</h2>
+<div class="grid-4">
+  <div class="card-cat"><h3>🏗️ CONSTRUCCIÓN</h3><p>EXCAVADORAS, CARGADORES, RETROEXCAVADORAS</p></div>
+  <div class="card-cat"><h3>⛏️ MINERÍA</h3><p>CAMIONES, TRACTORES, PERFORADORAS</p></div>
+  <div class="card-cat"><h3>🌾 AGROINDUSTRIA</h3><p>TRACTORES, GENERADORES, COSECHADORAS</p></div>
+  <div class="card-cat"><h3>🚛 TRANSPORTE</h3><p>CAMIONES DIESEL, MAQUINARIA VIAL</p></div>
+</div>
+</section>
+
+<!-- SERVICIOS -->
 <section id="servicios">
-<h2>Nuestros Servicios</h2>
-<div class="services">
-<div class="card"><h3>🔧 Mantenimiento Preventivo</h3><p>Revisiones programadas para evitar fallas y alargar la vida útil de tu maquinaria.</p></div>
-<div class="card"><h3>⚙️ Reparación de Motores Diesel</h3><p>Diagnóstico y reparación de motores diesel para maquinaria pesada.</p></div>
-<div class="card"><h3>🏗️ Sistema Hidráulico</h3><p>Reparación y mantenimiento de bombas, válvulas y cilindros hidráulicos.</p></div>
-<div class="card"><h3>🚜 Maquinaria Pesada</h3><p>Excavadoras, cargadores, retroexcavadoras, tractores y más.</p></div>
+<h2>SERVICIOS ESPECIALIZADOS</h2>
+<div class="grid-4">
+<div class="card-cat"><h3>⚙️ MOTORES DIESEL</h3><p>DIAGNÓSTICO, REPARACIÓN Y OVERHAUL COMPLETO</p></div>
+<div class="card-cat"><h3>🏗️ SISTEMA HIDRÁULICO</h3><p>BOMBAS, VÁLVULAS, CILINDROS Y DETECCIÓN DE FUGAS</p></div>
+<div class="card-cat"><h3>🔧 MANTENIMIENTO</h3><p>PREVENTIVO Y CORRECTIVO EN OBRA O TALLER</p></div>
+<div class="card-cat"><h3>⚡ SISTEMA ELÉCTRICO</h3><p>ARRANQUE, ALTERNADOR, SENSORES Y CABLEADO</p></div>
 </div>
 </section>
 
-<!-- NUEVO: Le agregué id="galeria" -->
-<section id="galeria" style="background:#111">
-<h2>Galería de Trabajos</h2>
-<div class="gallery">
-<img src="trabajo1.jpg" alt="Reparación de motor diesel">
-<img src="trabajo2.jpg" alt="Mantenimiento de excavadora">
-<img src="trabajo3.jpg" alt="Trabajo en taller">
-<img src="trabajo4.jpg" alt="Sistema hidráulico">
+<!-- ANTES Y DESPUÉS -->
+<section id="resultados" style="background:#111;">
+<h2>RESULTADOS QUE HABLAN</h2>
+<div class="gallery-cat">
+  <div class="before-after-cat">
+    <span class="tag">ANTES</span>
+    <img src="antes1.jpg" alt="Motor antes">
+  </div>
+  <div class="before-after-cat">
+    <span class="tag">DESPUÉS</span>
+    <img src="despues1.jpg" alt="Motor después">
+  </div>
+</div>
+<p style="text-align:center; margin-top:20px; color:#aaa;">REPARACIÓN COMPLETA MOTOR CAT 320 - ENTREGA EN 48 HORAS</p>
+</section>
+
+<!-- NOSOTROS -->
+<section id="nosotros">
+<h2>¿POR QUÉ WILD DUCK?</h2>
+<div class="grid-3">
+  <div class="card-cat"><h3>⚡ RESPUESTA RÁPIDA</h3><p>ATENDemos EN OBRA EN MENOS DE 2 HORAS EN TARAPOTO</p></div>
+  <div class="card-cat"><h3>✅ GARANTÍA ESCRITA</h3><p>3 MESES DE GARANTÍA EN TODOS NUESTROS TRABAJOS</p></div>
+  <div class="card-cat"><h3>💰 PRECIOS JUSTOS</h3><p>TE DAMOS 3 OPCIONES PARA QUE ELIJAS</p></div>
 </div>
 </section>
 
-<!-- NUEVO: SECCIÓN DE PREGUNTAS FRECUENTES -->
-<section id="faq">
-<h2>Preguntas Frecuentes</h2>
-<details style="background:#1a1a1a; padding:15px; margin:10px 0; border-radius:8px; border-left:3px solid #ffb400;">
-  <summary style="cursor:pointer; font-weight:bold; color:#ffb400; font-size:1.1rem;">¿Cuánto demora una reparación?</summary>
-  <p style="margin-top:10px;">Depende del daño. La evaluación es gratis y te damos el tiempo exacto el mismo día.</p>
-</details>
-
-<details style="background:#1a1a1a; padding:15px; margin:10px 0; border-radius:8px; border-left:3px solid #ffb400;">
-  <summary style="cursor:pointer; font-weight:bold; color:#ffb400; font-size:1.1rem;">¿Atienden a domicilio en Tarapoto?</summary>
-  <p style="margin-top:10px;">Sí, vamos a obra. Escríbenos por WhatsApp con tu ubicación y te cotizamos.</p>
-</details>
-
-<details style="background:#1a1a1a; padding:15px; margin:10px 0; border-radius:8px; border-left:3px solid #ffb400;">
-  <summary style="cursor:pointer; font-weight:bold; color:#ffb400; font-size:1.1rem;">¿Trabajan con todo tipo de maquinaria?</summary>
-  <p style="margin-top:10px;">Sí. Excavadoras, cargadores, retroexcavadoras, tractores, camiones y más.</p>
-</details>
-</section>
-
-<!-- NUEVO: Le agregué id="contacto" -->
-<section id="contacto" class="contact">
-<h2>Contáctanos</h2>
-<a href="https://wa.me/51906294436" target="_blank" class="btn-whatsapp">📱 Escríbenos por WhatsApp</a>
-
-<div class="info-grid">
-<div class="info-item">
-<h3>📍 Ubicación</h3>
-<p>Tarapoto, San Martín, Perú</p>
-<div class="map-container">
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63617.5!2d-76.36!3d-6.49!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91b7c9c5b8b8b8b8%3A0x123456789!2sTarapoto%2C%20San%20Martin!5e0!3m2!1ses!2spe!4v1234567890" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-</div>
-</div>
-<div class="info-item">
-<h3>🕒 Horarios</h3>
-<p>Lunes a Sábado: 8:00 AM - 6:00 PM</p>
-</div>
-<div class="info-item">
-<h3>📞 Contacto</h3>
-<p>WhatsApp: 906 294 436</p>
-</div>
+<!-- TESTIMONIOS -->
+<section style="background:#111;">
+<h2>LO QUE DICEN NUESTROS CLIENTES</h2>
+<div class="grid-3">
+  <div class="testimonio">
+    <div class="stars">⭐⭐</div>
+    <p>"ME SALVARON LA EXCAVADORA EN 1 DÍA. LLEGARON A OBRA RAPIDÍSIMO"</p>
+    <b>- CARLOS M. CONSTRUCTORA ANDES</b>
+  </div>
+  <div class="testimonio">
+    <div class="stars">⭐⭐⭐⭐⭐</div>
+    <p>"PROFESIONALES Y HONESTOS. EL MEJOR SERVICIO DE TARAPOTO"</p>
+    <b>- LUIS R. AGROINDUSTRIAL</b>
+  </div>
+  <div class="testimonio">
+    <div class="stars">⭐⭐⭐⭐⭐</div>
+    <p>"SOLUCIONARON UNA FALLA HIDRÁULICA QUE OTROS NO PUDIERON"</p>
+    <b>- MARÍA F. MINERÍA</b>
+  </div>
 </div>
 </section>
 
+<!-- CONTACTO -->
+<section id="contacto" class="contact-cat">
+<h2>SOLICITA COTIZACIÓN TÉCNICA</h2>
+<form style="max-width:700px; margin:0 auto;">
+  <input type="text" placeholder="NOMBRE / EMPRESA" required>
+  <input type="tel" placeholder="TELÉFONO / WHATSAPP" required>
+  <input type="text" placeholder="MODELO DE MÁQUINA" required>
+  <textarea rows="4" placeholder="DESCRIBA LA FALLA O SERVICIO REQUERIDO"></textarea>
+  <button class="btn-cat" style="width:100%; border:none;">ENVIAR SOLICITUD</button>
+</form>
+
+<div style="text-align:center; margin-top:40px;">
+  <p style="font-size:1.2rem;">O CONTÁCTANOS DIRECTO</p>
+  <a href="https://wa.me/51906294436" class="btn-cat" style="margin-top:15px;">WHATSAPP: 906 294 436</a>
+</div>
+</section>
+
+<!-- FOOTER -->
 <footer>
-<p>© 2026 WILD DUCK Diesel Repair. Todos los derechos reservados.</p>
+<p>📍 TARAPOTO - SAN MARTÍN | 🕒 LUN-SAB 8AM-6PM | EMERGENCIAS 24/7</p>
+<p style="margin-top:15px; color:#666;">© 2026 WILD DUCK DIESEL REPAIR | SERVICIO TÉCNICO ESPECIALIZADO</p>
 </footer>
+
+<!-- BOTONES FLOTANTES -->
+<a href="https://wa.me/51906294436" target="_blank" class="whatsapp-float">WA</a>
+<a href="tel:51906294436" class="call-float">📞 LLAMAR</a>
+
 </body>
 </html>
