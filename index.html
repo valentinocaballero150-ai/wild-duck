@@ -45,8 +45,9 @@ h2{font-size:2.5rem; color:var(--cat-yellow); text-align:center; margin-bottom:5
 .tag{background:var(--cat-yellow); color:#000; padding:8px 20px; position:absolute; top:10px; left:10px; font-weight:900; font-size:1rem;}
 
 /* TESTIMONIOS */
-.testimonio{background:#111; padding:30px; border-left:5px solid var(--cat-yellow);}
+.testimonio{background:#111; padding:30px; border-left:5px solid var(--cat-yellow); text-transform:none;}
 .stars{color:var(--cat-yellow); font-size:1.5rem; margin-bottom:10px;}
+.testimonio b{color:var(--cat-yellow); font-size:0.9rem;}
 
 /* CONTACTO */
 .contact-cat{background:#111;}
@@ -58,23 +59,10 @@ footer{background:#000; text-align:center; padding:40px; border-top:3px solid va
 
 /* WHATSAPP VERDE FLOTANTE */
 .whatsapp-float{
-  position:fixed; 
-  bottom:25px; 
-  right:25px; 
-  background:var(--whatsapp); 
-  color:#fff; 
-  width:65px; 
-  height:65px; 
-  border-radius:50%; 
-  display:flex; 
-  align-items:center; 
-  justify-content:center; 
-  font-size:40px; 
-  text-decoration:none; 
-  z-index:999; 
-  box-shadow:0 4px 20px rgba(37,211,102,0.5);
-  animation:pulse 2s infinite;
-  transition:transform 0.3s;
+  position:fixed; bottom:25px; right:25px; background:var(--whatsapp); color:#fff; 
+  width:65px; height:65px; border-radius:50%; display:flex; align-items:center; 
+  justify-content:center; font-size:40px; text-decoration:none; z-index:999; 
+  box-shadow:0 4px 20px rgba(37,211,102,0.5); animation:pulse 2s infinite;
 }
 .whatsapp-float:hover{transform:scale(1.1);}
 @keyframes pulse{
@@ -91,7 +79,6 @@ footer{background:#000; text-align:center; padding:40px; border-top:3px solid va
   position:fixed; bottom:100px; right:25px; background:var(--cat-yellow); color:#000; 
   width:60px; height:60px; border-radius:50%; display:flex; align-items:center; 
   justify-content:center; font-size:30px; cursor:pointer; z-index:998; font-weight:900;
-  box-shadow:0 4px 15px rgba(255,204,0,0.5);
 }
 #chat-box{
   position:fixed; bottom:100px; right:25px; width:320px; height:420px; 
@@ -193,24 +180,39 @@ footer{background:#000; text-align:center; padding:40px; border-top:3px solid va
 </div>
 </section>
 
-<!-- TESTIMONIOS -->
+<!-- TESTIMONIOS NUEVOS -->
 <section style="background:#111;">
 <h2>LO QUE DICEN NUESTROS CLIENTES</h2>
 <div class="grid-3">
   <div class="testimonio">
     <div class="stars">⭐</div>
-    <p>"ME SALVARON LA EXCAVADORA EN 1 DÍA. LLEGARON A OBRA RAPIDÍSIMO"</p>
-    <b>- CARLOS M. CONSTRUCTORA ANDES</b>
-  </div>
-  <div class="testimonio">
-    <div class="stars">⭐⭐⭐</div>
-    <p>"PROFESIONALES Y HONESTOS. EL MEJOR SERVICIO DE TARAPOTO"</p>
-    <b>- LUIS R. AGROINDUSTRIAL</b>
+    <p>"SE NOS MALOGRÓ LA EXCAVADORA UN LUNES 6AM. WILD DUCK LLEGÓ A OBRA EN 1 HORA Y A LAS 4PM YA ESTÁBAMOS PRODUCIENDO. SALVARON EL PROYECTO"</p>
+    <b>- ING. CARLOS MENDOZA | CONSTRUCTORA ANDES S.A.C.</b>
   </div>
   <div class="testimonio">
     <div class="stars">⭐</div>
-    <p>"SOLUCIONARON UNA FALLA HIDRÁULICA QUE OTROS NO PUDIERON"</p>
-    <b>- MARÍA F. MINERÍA</b>
+    <p>"LO MEJOR DE TARAPOTO EN HIDRÁULICA. 3 TALLERES NO PUDIERON CON LA FALLA DE MI CARGADOR. ELLOS LO DIAGNOSTICARON Y REPARARON EN 1 DÍA. 100% RECOMENDADOS"</p>
+    <b>- LUIS RAMÍREZ | EMPRESA AGROINDUSTRIAL DEL HUALLAGA</b>
+  </div>
+  <div class="testimonio">
+    <div class="stars">⭐</div>
+    <p>"TRABAJAMOS CON ELLOS HACE 2 AÑOS. HONESTOS, PUNTUALES Y DAN GARANTÍA. YA NO BUSCAMOS OTRO TALLER PARA NUESTROS CAMIONES Y TRACTORES"</p>
+    <b>- MARÍA FERNÁNDEZ | TRANSPORTE Y SERVICIOS FERNÁNDEZ</b>
+  </div>
+  <div class="testimonio">
+    <div class="stars">⭐⭐⭐⭐⭐</div>
+    <p>"ME DIERON 3 OPCIONES DE PRESUPUESTO Y ELEGÍ LA QUE ME CONVENÍA. ESO HABLA MUY BIEN DE ELLOS. PROFESIONALES Y TRANSPARENTES"</p>
+    <b>- JORGE PAREDES | MINERA SAN MARTÍN</b>
+  </div>
+  <div class="testimonio">
+    <div class="stars">⭐</div>
+    <p>"OVERHAUL COMPLETO DE MOTOR CAT 320. QUEDÓ COMO NUEVO. EL PRECIO FUE JUSTO Y CUMPLIERON CON LA FECHA. YA LLEVAMOS 8 MESES SIN FALLAS"</p>
+    <b>- ROBERTO VÁSQUEZ | ALQUILER DE MAQUINARIA PESADA RV</b>
+  </div>
+  <div class="testimonio">
+    <div class="stars">⭐</div>
+    <p>"ATENCIÓN 24/7 ES REAL. ME AUXILIARON UN DOMINGO EN LA NOCHE EN PLENA OBRA. LLEGARON CON REPUESTOS Y HERRAMIENTAS. UNOS CAPOS"</p>
+    <b>- ANA TORRES | CONSTRUCTORA TORRES & ASOCIADOS</b>
   </div>
 </div>
 </section>
